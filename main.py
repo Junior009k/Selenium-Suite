@@ -30,6 +30,9 @@ time.sleep(3)
 time.sleep(3) 
 #main.sendClic('//*[@id="fluent-default-layer-host"]/div[3]/div/div/div/div/div/div[3]/form/div[3]/button')
 time.sleep(300)
+time.sleep(300)
+time.sleep(300)
+time.sleep(300)
 main.stopDriver()
 #//*[@id="fluent-default-layer-host"]/div[3]/div/div/div/div/div/div/ul/li[4]/button/div/span
 

@@ -1,4 +1,5 @@
 
+from Constante import *
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service 
 from webdriver_manager.chrome import ChromeDriverManager
@@ -42,8 +43,9 @@ class SeleniumSuite:
     def startDriver(self):
         service = Service(ChromeDriverManager().install())
         options = Options()
-        options.binary_location = "C:\\Users\\jaquino\\Downloads\\GoogleChromePortable\\App\\Chrome-bin\\chrome.exe"
-        self.setDriver(self.driver.Chrome(service=service,options=options))
+        options.binary_location = PATHCHROME 
+        if PATHCHROME == '':self.setDriver(self.driver.Chrome(service=service))
+        else:self.setDriver(self.driver.Chrome(service=service,options=options))
         #self.setDriver(self.driver.Chrome(executable_path='./chromedriver'))
         self.driver.get(self.url)
 
