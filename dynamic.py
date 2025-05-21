@@ -21,5 +21,15 @@ class Dynamic:
     def showCase(self):
         self.seleniumObject.sendClic('//*[@id="sitemap-entity-nav_cases"]/div/div/div[2]')
         time.sleep(3) 
-        self.seleniumObject.Read('//*[@id="entity_control-powerapps_onegrid_control_container"]/div/div/div[1]/div/div/div[1]/div/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div[3]/div[6]/div/div/div/div/div[1]/label/div')
+        self.readStatusCase()
         time.sleep(15) 
+        
+    def readStatusCase(self):
+        try:
+            i=1
+            while i<20:
+                self.seleniumObject.Read(f'//*[@id="entity_control-powerapps_onegrid_control_container"]/div/div/div[1]/div/div/div[1]/div/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div[{i}]/div[2]/div/div/div/div/div[1]/div/a/div/span')
+                self.seleniumObject.Read(f'//*[@id="entity_control-powerapps_onegrid_control_container"]/div/div/div[1]/div/div/div[1]/div/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div[{i}]/div[6]/div/div/div/div/div[1]/label/div')
+                i=i+1
+        except:
+            pass
