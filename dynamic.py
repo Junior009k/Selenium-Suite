@@ -3,5 +3,23 @@ from selenium import webdriver
 from SeleniumSuite import *
 
 class Dynamic:
-    seleniumObject=SeleniumSuite("https://sidesys.crm2.dynamics.com/main.aspx?appid=52a8ce47-f7cf-417d-8eee-3bf324bea667&forceUCI=1&pagetype=dashboard&id=d201a642-6283-4f1d-81b7-da4b1685e698&type=system&_canOverride=true",webdriver)
-    
+    seleniumObject=SeleniumSuite("https://sidesys.crm2.dynamics.com/main.aspx?appid=52a8ce47-f7cf-417d-8eee-3bf324bea667&pagetype=dashboard&id=d201a642-6283-4f1d-81b7-da4b1685e698&type=system&_canOverride=true",webdriver)
+    def login(self):
+        time.sleep(5) 
+        self.seleniumObject.maximizar()
+        self.seleniumObject.sendEntry(USER,'//*[@id="i0116"]')
+        time.sleep(1) 
+        self.seleniumObject.sendClic('//*[@id="idSIButton9"]')
+        time.sleep(3) 
+        self.seleniumObject.sendEntry(PASSWORD,'//*[@id="i0118"]')
+        time.sleep(1)   
+        self.seleniumObject.sendClic('//*[@id="idSIButton9"]')
+        time.sleep(3) 
+        self.seleniumObject.sendClic('//*[@id="idSIButton9"]')
+        time.sleep(25) 
+        
+    def showCase(self):
+        self.seleniumObject.sendClic('//*[@id="sitemap-entity-nav_cases"]/div/div/div[2]')
+        time.sleep(3) 
+        self.seleniumObject.Read('//*[@id="entity_control-powerapps_onegrid_control_container"]/div/div/div[1]/div/div/div[1]/div/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/div[3]/div[6]/div/div/div/div/div[1]/label/div')
+        time.sleep(15) 
