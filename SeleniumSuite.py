@@ -25,8 +25,7 @@ class SeleniumSuite:
     def getDriver(self):return self.driver
     def sendEntry(self,text,xpath):self.driver.find_element("xpath",xpath).send_keys(text)
     def sendClic(self,xpath):self.driver.find_element("xpath",xpath).click()
-    def Read(self,xpath):
-        print(self.driver.find_element("xpath",xpath).text)
+    def Read(self,xpath):return self.driver.find_element("xpath",xpath).text
     def maximizar(self):self.driver.maximize_window()
     def scrollVertical(self,scroll, element):
         self.driver.execute_script(f"arguments[0].scrollLeft += {scroll};", self.driver.find_element("xpath", element) )  # Mueve 500px a la derecha

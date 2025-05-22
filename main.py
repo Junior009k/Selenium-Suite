@@ -1,7 +1,7 @@
 import time
 from selenium import webdriver
 from SeleniumSuite import *
-from dynamic import Dynamic
+from Dynamic import Dynamic
 
 main=Dynamic()
 
