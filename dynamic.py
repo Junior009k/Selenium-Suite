@@ -7,6 +7,7 @@ class Dynamic:
     notification=Mail()
     seleniumObject=SeleniumSuite("https://sidesys.crm2.dynamics.com/main.aspx?appid=52a8ce47-f7cf-417d-8eee-3bf324bea667&pagetype=dashboard&id=d201a642-6283-4f1d-81b7-da4b1685e698&type=system&_canOverride=true",webdriver)
     def login(self):
+        print(USER)
         time.sleep(5) 
         self.seleniumObject.maximizar()
         self.seleniumObject.sendEntry(USER,'//*[@id="i0116"]')

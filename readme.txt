@@ -1,6 +1,7 @@
 1-librerias a instalar
 
 pip install webdriver-manager
+pip install pycryptodome
 
 2-Path de chrome
 
@@ -17,3 +18,33 @@ PORT=''
 EMAIL=''
 PASSWORD=''
 TO=''
+
+4-Desencriptador de contraseña 
+
+utilizar herramienta tooldesencriptador.exe
+
+5-Valores del appsetting en caso de que no este
+{
+    "PathChrome": 
+            {
+                "value": ""
+            },
+    "User": 
+            {
+                "name": "",
+                "password": ""
+            },
+    "Mail": 
+            {
+                "server": "",
+                "port": "",
+                "email": "",
+                "password": "",
+                "to": ""
+            },
+    "other": 
+            {
+                "iv_b64": "",
+                "passphrase": ""
+            }
+}

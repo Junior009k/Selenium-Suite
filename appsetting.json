@@ -1,0 +1,24 @@
+{
+    "PathChrome": 
+            {
+                "value": ""
+            },
+    "User": 
+            {
+                "name": "",
+                "password": ""
+            },
+    "Mail": 
+            {
+                "server": "",
+                "port": "",
+                "email": "",
+                "password": "",
+                "to": ""
+            },
+    "other": 
+            {
+                "iv_b64": "",
+                "passphrase": ""
+            }
+}
